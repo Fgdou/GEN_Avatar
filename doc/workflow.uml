@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:Ouvrir interface graphique;
+
+:Ouvrir BaseDeDonnees (Adresses et synonymes);
+
+:Requête de l'utilisateur;
+
+-> String;
+
+:Détecter mots clefs;
+
+-> List[String];
+
+:Remplacer par synonyme;
+
+-> List[String];
+
+:Séparation de la requète;
+
+-> List[String];
+
+:Recherche en BaseDeDonnee;
+
+-> List[String];
+
+:Transformer en phrase;
+
+-> String;
+
+:Afficher la phrase;
+
+stop
+
+@enduml

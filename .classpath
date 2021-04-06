@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="tests"/>
+	<classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/client.jar"/>
+	<classpathentry kind="lib" path="lib/scala-swing_2.12.0-M5-2.0.0-M2-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/scala-swing_2.12.0-M5-2.0.0-M2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/libTTS/icu4j-54.1.1.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-client-5.1.2-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-de-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-en-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-fr-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-it-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-ru-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-sv-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-te-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-lang-tr-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/marytts-runtime-5.1.2-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/voice-cmu-slt-hsmm-5.1.2.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/voice-dfki-pavoque-neutral-hsmm-5.1.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/voice-istc-lucia-hsmm-5.1.jar"/>
+	<classpathentry kind="lib" path="lib/libTTS/voice-upmc-pierre-hsmm-5.1.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.1.jar"/>
+	<classpathentry kind="lib" path="lib/htmlcleaner-2.18.jar"/>
+	<classpathentry kind="lib" path="lib/scala-xml_2.12-1.0.6-javadoc.jar"/>
+	<classpathentry kind="lib" path="lib/scala-xml_2.12-1.0.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

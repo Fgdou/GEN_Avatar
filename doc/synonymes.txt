@@ -1,0 +1,14 @@
+Bonsoir;Bonjour
+Salut;Bonjour
+Hotel de Ville;Mairie de Rennes
+Hotel Ville;Mairie de Rennes
+Mairie Rennes;Mairie de Rennes
+Mairie;Mairie de Rennes
+Gare;Gare SNCF
+TNB;Théâtre National de Bretagne
+Théâtre Bretagne;Théâtre National de Bretagne
+Théâtre De Bretagne;Théâtre National de Bretagne
+Théâtre National Bretagne;Théâtre National de Bretagne
+Théâtre Paillette;Théâtre La Paillette
+Théâtre De La Paillette;Théâtre La Paillette
+Paillette;Théâtre La Paillette

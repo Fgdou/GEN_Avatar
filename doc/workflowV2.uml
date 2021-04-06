@@ -1,0 +1,47 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+
+:Ouvrir interface graphique;
+note right : Raoul et Pinault
+
+:Ouvrir BaseDeDonnees (Adresses et synonymes);
+note right : Bastien et Louis
+
+:Choix de la langue;
+
+:Validation ou non;
+
+:Requête de l'utilisateur;
+note right : Hector et Lequertier
+
+-> String;
+
+:Détecter mots clefs;
+note right : Clément
+
+-> List[String];
+
+:Remplacer par synonyme;
+
+-> List[String];
+
+:Séparation de la requète;
+note right : Fabien
+
+-> List[String];
+
+:Recherche en BaseDeDonnee;
+
+-> List[String];
+
+:Transformer en phrase;
+
+-> String;
+
+:Afficher la phrase;
+
+stop
+
+@enduml

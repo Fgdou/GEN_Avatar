@@ -1,0 +1,150 @@
+@startuml
+package Tests{
+    class TestsDB
+    class TestsDM
+    class TestsCorrection
+    class TestsDictionarySearch
+}
+package BackEnd{
+    interface MachineDialogue{
+        def reinit(): Unit
+        def test(List[String]): List[String]
+        def ask(String): String
+    }
+    class MachineImpl{
+        def reinit(): Unit
+        def test(List[String]): List[String]
+        def ask(String): String
+
+        def separerMots(String): List[String]
+    }
+    MachineImpl ..|> MachineDialogue
+
+    note top: Bastien Clément Fabien
+
+    interface CorrectionErreur{
+        def trouverMotsCles(String, List[String]): List[String]
+    }
+    class CorrectionImpl {
+        def trouverMotsCles(String, List[String]): List[String]
+        def hamming(String, String): Boolean
+    }
+    CorrectionImpl ..|> CorrectionErreur
+    note bottom
+     Hamming: Hector
+     Correction: Fabien
+     SupprimerDeterminants: Thibaud
+    end note
+    
+    interface DictionarySearch{
+        def reinit(): Unit
+        def test(List[String]): List[String]
+        def ask(String): String
+    }
+    class DictionarySearchImpl{
+        def reinit(): Unit
+        def test(List[String]): List[String]
+        def ask(String): String
+
+        def separerMots(String): List[String]
+    }
+    DictionarySearchImpl ..|> DictionarySearch
+    MachineDialogue --> DictionarySearch
+    note bottom: Thibaut
+
+
+    package Data{
+        interface BaseDeDonnee{
+            def load(pah: String): Unit
+            def getOrElse(String, String): String
+            def getNoms(): List[String]
+        }
+        class BaseDeDonneeImpl{
+            def load(pah: String): Unit
+            def getOrElse(String, String): String
+            def getNoms(): List[String]
+        }
+        BaseDeDonneeImpl ..|> BaseDeDonnee
+        note right: Louis
+
+		
+        interface Language{
+            def load(path: String): Unit
+            def getWordsOrElse(category: String, word: String, else: String): List[String]
+            def getExpressionOrElse(lang: String, line: Int, placeholder: String): String
+        }
+        note bottom: Hector & Thibaud
+        class LanguageImp{
+            def load(path: String): Unit
+            def getWordsOrElse(category: String, word: String, else: String): List[String]
+            def getExpressionOrElse(lang: String, line: Int, placeholder: String): String
+        }
+        LanguageImp ..|> Language
+        MachineDialogue --> Language
+
+        interface XmlSearch{
+            def load(path: String): Unit
+            def search(keywords: String): List[String]
+            def getAddress(name: String): String
+        }
+        note bottom: Bastien,Louis
+        class XmlSearchImp{
+            def load(path: String): Unit
+            def search(keywords: String): List[String]
+            def getAddress(name: String): String
+        }
+        XmlSearchImp ..|> XmlSearch
+
+		
+        interface internauteSearch{
+            def setLocalFile(url: String): Unit
+            def search(keywords: String): Unit
+        }
+        note bottom: Fabien
+        class internauteSearchImp{
+            def setLocalFile(url: String): Unit
+            def search(keywords: String): Unit
+        }
+        
+        internauteSearchImp ..|> internauteSearch
+        MachineDialogue --> internauteSearch
+    }
+}
+
+package GUI{
+    class UI{
+    }
+    note top: Thibaut & Guillaume
+
+    Bulle ..|> Label
+    TextBox ..|> TextField
+    HumanBulle ..|> Bulle
+    RobotBulle ..|> Bulle
+    NeutralBulle ..|> Bulle
+	SendButton ..|> Button
+	MaryVoice --> Bulle
+}
+package User{
+    class Client
+    class Application
+}
+
+
+
+
+
+
+
+UI --> MachineDialogue
+Client --> MachineDialogue
+MachineDialogue --> CorrectionErreur
+MachineDialogue --> BaseDeDonnee
+MachineDialogue --> XmlSearch
+Application --> UI
+
+UI --> TextBox
+UI --> HumanBulle
+UI --> RobotBulle
+UI --> NeutralBulle
+UI --> SendButton
+@enduml
